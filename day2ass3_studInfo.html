@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student info</title>
+    <script type="text/javascript">
+    var prnArray = ["1","2","3"];
+    var nameArray = ["Amit","Rohan","Ankur"];
+    var percArray = ["66","15","56"];
+    function addToTable()
+    {
+        var prnInputField = document.getElementById("prn");
+        var prn = prnInputField.value;
+        prnArray.push(prn);
+        var nameInputField = document.getElementById("name");
+        var name = nameInputField.value;
+        nameArray.push(name);
+        var percInputField = document.getElementById("perc");
+        var perc = percInputField.value;
+        percArray.push(perc);        
+
+        var contents = '<table> <tr> <td style="background-color:silver; ">PRN</td><td style="background-color:silver; ">Name</td>  <td style="background-color:silver; ">Percentage</td>     </tr>';
+            var i=0;
+            for(i=0;i<prnArray.length;i++)
+            {
+                contents = contents + "<tr><td>"+prnArray[i]+"</td><td>"
+                        +nameArray[i]+"</td><td>"+percArray[i]+"</td></tr>";
+            }
+            contents = contents +"</table>";
+
+            var prnList = document.getElementById("trPrnlist");
+            prnList.innerHTML = contents;
+
+    }
+
+    </script>
+</head>
+
+<body style="margin: 5%;">
+    <h1>Student List</h1>
+    Enter PRN:<input id="prn" type="number" />
+    Enter Name:<input id="name" type="text" />
+    Enter Percent:<input id="perc" />
+    <button style="background-color: skyblue; color: yellow;" onclick="addToTable();">Add To Table</button>
+    <br>
+    <br>
+    <table id="trPrnlist" style="width: 40%;" border="1" >
+
+        <tr>
+            <td style="background-color:silver;width: 10%; ">PRN</td>
+            <td style="background-color:silver;width: 50%; ">Name</td>
+            <td style="background-color:silver;width: 40%; ">Percentage</td>
+        </tr>
+        
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                Amit
+            </td>
+            <td>
+                66%
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2
+            </td>
+            <td>
+                Rohan
+            </td>
+            <td>
+                15%
+            </td>
+        </tr>
+        <tr>
+                <td>
+                    3
+                </td>
+                <td>
+                    Ankur
+                </td>
+                <td>
+                    56%
+                </td>
+            </tr>
+    </table>
+</body>
+
+</html>

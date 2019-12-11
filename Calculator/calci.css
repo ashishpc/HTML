@@ -1,0 +1,34 @@
+table{
+    width: 300px;
+    height: 400px;
+    border: 1px solid red;
+    background-color: aqua;
+}
+h2{
+    font: bold;
+    color: rgb(213, 218, 213);
+}
+body{
+    background-image: url("calci1.png");   
+    
+}
+#stripe {
+    background-color: white;
+    text-align: center;
+    height: 50px;
+    color: black;
+}
+button{
+    border: none;
+    background-color: silver;
+    font-weight: bold;
+    color: black;
+    size: 100%;
+    width: 100%;
+    height: 100%;
+    
+}
+button:hover{
+    color: red;
+    background-color: chartreuse;
+}

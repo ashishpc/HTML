@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calci</title>
+        <link rel="stylesheet" href="calci.css">
+        <script src="calci.js"></script>
+       
+    </head>
+    <body>
+        <center><h2>CALCULATOR</h2></center>
+        <table align="center">
+            <tr>
+                <th colspan="4"><input type="text" id="text1"> </th>
+            </tr>
+            <tr>
+                <th colspan="4"><input type="text" id="text2"></th>
+            </tr>
+            <tr>
+                <td><button style="color: orangered;" onclick="clear1()">C</button></td>
+                <td><button>&lAarr;</button></td>
+                <td><button onclick="addClick('/')">&div;</button></td>
+                <td><button onclick="addClick('*')">&times;</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="addClick('7')">7</button></td>
+                    <td><button onclick="addClick('8')">8</button></td>
+                    <td><button onclick="addClick('9')">9</button></td>
+                    <td><button onclick="addClick('-')">&minus;</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="addClick('4')">4</button></td>
+                    <td><button onclick="addClick('5')">5</button></td>
+                    <td><button onclick="addClick('6')">6</button></td>
+                    <td><button onclick="addClick('+')">+</button></td>
+            </tr>       
+            <tr>
+                    <td><button onclick="addClick('1')">1</button></td>
+                    <td><button onclick="addClick('2')">2</button></td>
+                    <td><button onclick="addClick('3')">3</button></td>
+                    <td rowspan="2"><button style="background-color: orangered;color: aliceblue;" onclick="calculate()"> &equals;</button></td>
+            </tr>
+            <tr>
+                    <td><button onclick="addClick()">%</button></td>
+                    <td><button onclick="addClick()">0</button></td>
+                    <td><button onclick="addClick()">.</button></td>
+                    
+            </tr>
+        </table>
+    </body>
+</html>

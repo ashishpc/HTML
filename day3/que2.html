@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Store Information</title>
+    <script type="text/javascript">
+        var json = [
+            {
+                "itemname": "shoes",
+                "price": 2500,
+                "category": "personal"
+            },
+            {
+                "itemname": "T-shirt",
+                "price": 1500,
+                "category": "Garments"
+            },
+            {
+                "itemname": "Book-ignited minds",
+                "price": 350,
+                "category": "stationary"
+            }
+        ]
+        function showFromTable() {
+         var table ="<table style='border: 1px solid black;'><tr><th>CheckBox</tx><th>ItemName</th><th>Price</th><th>Category</th></tr>";
+         for(var i=0;i<json.length;i++){
+             table = table +"<tr><td><input type='checkbox'/></td><td>"+json[i].itemname+"</td><td>"+json[i].price+"</td><td>"+json[i].category+"</td></tr>";
+             }
+             table = table +"</table>";
+             document.getElementById("test").innerHTML=table;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="test">
+
+    </div>
+    <div>Static data</div>
+    <button style="background-color:skyblue; color: yellow;" onclick="showFromTable();">Show From
+    Table</button>
+
+</body>
+
+</html>

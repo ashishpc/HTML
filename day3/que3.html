@@ -1,0 +1,59 @@
+<!-- https://jsonplaceholder.typicode.com/posts -->
+<html>
+    <head>
+        <style>
+            table,td{
+                height:40px;
+                width:1050px;
+                text-align: center;
+               border: 2px solid black;
+               border-collapse: collapse;
+            }
+            tr:nth-child(odd){
+                background-color:lightblue;
+            }
+            th{
+                height: 40px;
+                position:sticky;
+                top:0px;
+                right:0px;
+                background-color:dodgerblue;
+            }
+        </style>
+        <script>
+            function dataAvailable()
+            {
+                if(this.readyState==4 && this.status==200)
+                {
+                    var jsonArray =JSON.parse(this.responseText);
+                    var contents="<table border='1' align='center'><tr><th>UserId</th><th>Id</th><th>Title</th><th>Body</th></tr>";
+                    for(i=0;i<jsonArray.length;i++){
+                        var obj=jsonArray[i];
+                        var row ="<tr>"+"<td>"+obj.userId+"</td>"+"<td>"+
+                        obj.id+"</td>"+"<td>"+obj.title+"</td>"+"<td>"+
+                        obj.body+"</td>"+"</tr>";
+                        contents += row;
+                    }
+                    contents += "</table>";
+                    document.getElementById("output").innerHTML = contents;
+
+                }
+            }
+            function downloadData()
+            {
+                var myURL = "https://jsonplaceholder.typicode.com/posts";
+                var httpReq = new XMLHttpRequest();
+                httpReq.onreadystatechange = dataAvailable;
+                httpReq.open("GET",myURL,true);
+                httpReq.send();
+
+            }
+        </script>
+    </head>
+    <body>
+        <button id="download" onclick="downloadData();">Download</button>
+      <br>
+      <br>
+        <div id="output" style="height: 900px; overflow:scroll;"></div>
+    </body>
+</html>

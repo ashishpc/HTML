@@ -1,0 +1,42 @@
+[
+    {
+        "PRN": 1,
+        "NAME": "Amit",
+        "Marks": {
+            "DBMS": 20,
+            "AWP": 45,
+            "OS": 46
+        },
+        "Contact": [
+            985485964
+        ],
+        "Percent": 66
+    },
+    {
+        "PRN": 2,
+        "NAME": "Rohan",
+        "Marks": {
+            "DBMS": 20,
+            "AWP": 10,
+            "OS": 15
+        },
+        "Contact": [
+            985481257,985347126
+        ],
+        "Percent": 15
+    },
+
+    {
+        "PRN": 3,
+        "NAME": "Ankur",
+        "Marks": {
+            "DBMS": 32,
+            "AWP": 9,
+            "OS": 18
+        },
+        "Contact": [
+            845481257,763347126
+        ],
+        "Percent": 56
+    }
+]

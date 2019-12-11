@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>          
+     <title>Slide Show</title>
+     <script>
+         $(document).ready(function(){
+             var imageArr=["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"];
+             var i=0;
+             console.log(imageArr);
+             $("#nextbutton").click(function (){
+                 $("#screen").css({"background-image":"url('"+imageArr[i]+"')"});
+                 i =(i+1)%5;
+             })
+         });
+     </script>
+        <style>
+            #screen{
+                background-image: url("img1.jpg");
+                width: 1000px;
+                height:400px;
+                
+                background-repeat:no-repeat;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="screen">
+        </div>
+        <button id="nextbutton">Next</button>
+    </body>
+</html>

@@ -11,51 +11,49 @@
 </head>
 
 <body>
-    <form action="./action_page.php" method="POST">
-        <div>
+    <form action="action_page.php" method="POST">
+        
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
+            <table align="center">
             <hr>
-            <label for="fname"><b>Firstname: </b></label>
-            <input type="text" placeholder="Enter your FirstName" name="fname">
-            <br>
-            <br>
-            <label for="lname"><b>LastName: </b></label>
-            <input type="text" placeholder="Enter your LastName" name="lname">
-            <br>
-            <br>
-            <label for="contact"><b>Contact: </b></label>
-            <input type="number" placeholder="Enter your contactno" name="contact">
-            <br>
-            <br>
-            <label for="dob"><b>DOB: </b></label>
-            <input type="date" placeholder="Enter your DOB" name="dob">
-            <br>
-            <br>
-            Gender:
-            <input type="radio" name="gender" value="male" checked> Male<br>
+            <tr for="fname">
+                <td>
+                    <b>Firstname: </b>
+            </td>
+           <td> <input type="text" placeholder="Enter your FirstName" name="fname"></td></tr>
+            
+            <tr for="lname"><td><b>LastName: </b></td>
+           <td> <input type="text" placeholder="Enter your LastName" name="lname"></td></tr>
+            
+            <tr for="contact"><td><b>Contact: </b></td>
+           <td><input type="number" placeholder="Enter your contactno" name="contact"></td></tr>
+            
+            <tr for="dob"><td><b>DOB: </b></td>
+            <td><input type="date" placeholder="Enter your DOB" name="dob"></td></tr>
+            
+            <tr><td><b>Gender: </b></td>
+            <td><input type="radio" name="gender" value="male" checked> Male<br>
             <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other
-            <br>
-            <br>
-            <label for="email"><b>Email: </b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <br>
-            <br>
-            <label for="password"><b>Password: </b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-            <br><br>
-            <label for="cpassword"><b>Confirm Password: </b></label>
-            <input type="password" placeholder="Confirm Password" name="cpassword" required>
-            <br><br>
-            <label for="cname"><b>CompanyName: </b></label>
-            <input type="text" placeholder="Enter CompanyName" name="cname" required>
-            <br><br>
-            <button type="submit" class="register">register</button>
+            <input type="radio" name="gender" value="other"> Other</td></tr>
+            
+            <tr for="email"><td><b>Email: </b></td>
+            <td><input type="text" placeholder="Enter Email" name="email" required></td></tr>
+            
+            <tr for="password"><td><b>Password: </b></td>
+            <td><input type="password" placeholder="Enter Password" name="password" required></td></tr>
+            
+            <tr for="cpassword"><td><b>Confirm Password: </b></td>
+            <td><input type="password" placeholder="Confirm Password" name="cpassword" required></td></tr>
+            
+            <tr for="cname"><td><b>CompanyName: </b></td>
+            <td><input type="text" placeholder="Enter CompanyName" name="cname" required></td></tr>
+            
+            <tr> <td></td><td><button type="submit" class="register">register</button>
 
-            <button type="submit" class="clear">clear</button>
+           <button type="submit" class="clear">clear</button></td></tr>
 
-        </div>
+        </table>
 
     </form>
 </body>

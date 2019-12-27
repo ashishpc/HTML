@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  {
                             $servername = "localhost";
                             $username = "root";
-                            $pass = "actscdac";
+                            $pass = "";
                             $dbname = "test";
                             $conn = new mysqli($servername,$username,$pass,$dbname);
                             if($conn->connect_error)
@@ -38,3 +38,4 @@ else{
 }
 echo "Hello world";
 #$conn->close(); 
+?>
